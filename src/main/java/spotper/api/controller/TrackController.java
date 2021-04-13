@@ -2,6 +2,7 @@ package spotper.api.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import spotper.api.exception.ResourceNotFoundException;
@@ -28,7 +29,7 @@ public class TrackController {
     @CrossOrigin
     @GetMapping("/albums/{id}/tracks")
     public List<Track> getTracksByAlbumId(@PathVariable(value = "id") long albumId) {
-        return trackRepository.findTrackByAlbumId(albumId);
+        return trackRepository.findTrackByAlbumId(albumId, Sort.by("trackNumber"));
     }
 
     @CrossOrigin
