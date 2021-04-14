@@ -42,13 +42,16 @@ Can occur upon:
 ## Installation and Setup Instructions
 ### Requirements
 
- - [ ] JDK 14 
- - [ ] Maven 4.0+
- - [ ] Microsoft SQL Server 2019 Express + Management System
- - [ ] Any IDE supporting Spring Framework
+ - [] JDK 14 
+ - [] Maven 4.0+
+ - [] Microsoft SQL Server 2019 Express + Management System
+ - [] Any IDE supporting Spring Framework
 
-Connect to SQL Server Express with SQL Server Authentication, and create your database.
-Clone down this repository and import the Maven project into your chosen IDE. Then, run `mvn clean install` . 
+Connect to SQL Server Express with SQL Server Authentication, and create your empty database with 
+```sql 
+CREATE DATABASE DB_NAME
+```
+Clone this repository and import the Maven project into your chosen IDE. Then, run `mvn clean install` . 
 On **src/main/resources/application.properties**, add the following code (replacing `???` with your database info):
 
 ```properties
