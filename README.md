@@ -42,10 +42,10 @@ Can occur upon:
 ## Installation and Setup Instructions
 ### Requirements
 
- - [] JDK 14 
- - [] Maven 4.0+
- - [] Microsoft SQL Server 2019 Express + Management System
- - [] Any IDE supporting Spring Framework
+ - [ ] JDK 14 
+ - [ ] Maven 4.0+
+ - [ ] Microsoft SQL Server 2019 Express + Management System
+ - [ ] Any IDE supporting Spring Framework
 
 Connect to SQL Server Express with SQL Server Authentication, and create your empty database with 
 ```sql 
