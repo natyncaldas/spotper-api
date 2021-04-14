@@ -27,11 +27,15 @@ No authentication required
 
 ### Error Codes
 
-``` HTTP STATUS: 404 ```
+```http 
+HTTP STATUS: 404 
+```
 
 Can occur upon trying to GET / PUT / DELETE an object by ID, whereas the ID is invalid.
 
-``` HTTP STATUS: 500 ```
+```http 
+HTTP STATUS: 500 
+```
 
 Can occur upon: 
 
@@ -149,8 +153,8 @@ Finally, run **src/main/java/spotper/api/SpotperApiApplication.java**
 |HTTP Method| Path | Params | Body | Success | Error | Description
 |--|--|--|--|--|-- | --
 | `GET` | /tracks| None | None | 200 | None | Get all tracks
-| `GET` | /albums/{id}/tracks| None | None | 200 | None | Get all tracks from an album
-| `GET` | /playlists/{id}/tracks| None | None | 200 | None | Get all tracks from a playlist
+| `GET` | /albums/{id}/tracks| None | None | 200 | 404 | Get all tracks from an album
+| `GET` | /playlists/{id}/tracks| None | None | 200 | 404 | Get all tracks from a playlist
 | `GET` | /tracks/{id} | None | None | 200 | 404  | Get track by ID
 | `POST` | /tracks| None | *Examples below* | 201 | 500 | Create new track
 | `PUT` | /tracks/{id} | None | *Examples below* | 200 | 404 | Edit track by ID
@@ -181,7 +185,7 @@ Finally, run **src/main/java/spotper/api/SpotperApiApplication.java**
 | `POST` | /tracks/playlists | None | *Examples below*| 201 | 500 | Create new track and playlist relation 
 | `DELETE` | /tracks/playlists | trackId *(required)*, playlistId *(required)*| None | 204 | 404  | Delete track and playlist relation by composite ID
 
-## `POST` Json Examples
+## `POST` JSON Examples
 
 ```json
 //LABEL
